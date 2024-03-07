@@ -1787,3 +1787,354 @@ Traceback (most recent call last):
     json_data = json.dumps(res, cls=DjangoJSONEncoder)
 UnboundLocalError: local variable 'res' referenced before assignment
 "POST /komplain/updateStatus/ HTTP/1.1" 500 23947
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 187, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_02_50_56_927524" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 151, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 193, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25773
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 187, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_02_52_25_707896" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 151, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 193, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 187, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_02_56_56_907284" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 151, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 193, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 187, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_02_57_00_325829" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 151, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 193, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 187, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_02_58_18_757549" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 151, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 193, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 187, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_02_58_20_524457" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 151, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 193, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 187, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_03_00_19_974257" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 151, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 193, in execute
+    print('E : ' + e)
+TypeError: can only concatenate str (not "CalledProcessError") to str
+"GET /report/get/ HTTP/1.1" 500 25637
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 190, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_03_01_36_960210" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 154, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 196, in execute
+    print('E : ' + e)
+TypeError: can only concatenate str (not "CalledProcessError") to str
+"GET /report/get/ HTTP/1.1" 500 25637
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 190, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_03_02_07_674155" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 154, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 197, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 190, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_03_05_43_312617" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 154, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 197, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 187, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_03_06_56_735354" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 151, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 194, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 190, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_03_07_32_525246" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 154, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 197, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852
+Internal Server Error: /report/get/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 190, in execute
+    output = subprocess.run(
+  File "/Users/juanmoore/miniconda3/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperstarter/bin/jasperstarter --locale en_US process "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jrxml/Komplain.jasper" -o "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/static/report/komplain_IT_07_03_2024_03_07_56_183852" -f pdf -t generic -u tester -p tester2024# -H tester.medisimed.com -n PK001 --db-port 1433 --db-driver com.microsoft.sqlserver.jdbc.SQLServerDriver --db-url jdbc:sqlserver://tester.medisimed.com:1433;databaseName=PK001 --jdbc-dir /Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/jdbc' returned non-zero exit status 127.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 390, in reportGet
+    report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 154, in generateReportDB
+    jasper.process(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 154, in process
+    return self.execute()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/pyreportjasper/jasperpy.py", line 197, in execute
+    raise NameError('Your report has an error and couldn '
+NameError: Your report has an error and couldn \'t be processed!\ Try to output the command using the attribute `command;` and run it manually in the console!
+"GET /report/get/ HTTP/1.1" 500 25852

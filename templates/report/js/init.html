@@ -1,0 +1,641 @@
+<script>
+    path = window.location.origin;
+    console.log(path);
+
+    resKomplain = [];
+
+    $(document).ready(function () {
+        initFormInput();
+        initButton();
+        getDataKomplain();
+
+        $('#btn_hapus').hide();
+        $('#btnShowHide').trigger('click');
+    })
+
+    var ketKomplain = false;
+    var deleting = false;
+    var editing = false;
+    var showImageState = false;
+    var expandState = false;
+
+    function showToast(title, msg, icon = 'success') {
+        let timerInterval;
+        Swal.fire({
+        title: title,
+        html: '<span style="font-size: 18px;">' + msg + '</span>',
+        icon: icon,
+        timer: 1500,
+        timerProgressBar: true,
+        // position: 'top',
+        backdrop: false,
+        allowOutsideClick: false,
+        background: 'rgba(255, 255, 255, 0.8)',
+        // color: 'white',
+        didOpen: () => {
+            Swal.showLoading();
+        },
+        willClose: () => {
+            clearInterval(timerInterval);
+        }
+        }).then((result) => {
+        });
+    }
+
+    function clearForm() {
+        $('#idKomplain').val('');
+        $('#judulKomplain').val('');
+        $('#ketKomplain').val('');
+        $('#pelaporKomplain').val('');
+        $('#pjKomplain').val('');
+        $('#gambarKomplain').val('');
+
+        $('#idKomplain').prop('disabled', true);
+        editing = false;
+    }
+
+    function expanForm(expand = false) {
+        if(!showImageState) {
+            if(expand) {
+                $('#formKomplain').css('height', 'auto');
+            }else {
+                $('#formKomplain').css('height', '80px');
+            }
+        }
+    }
+
+    function setDisabled(id, disabled = true) {
+        $('#' + id).attr('disabled', disabled);
+    }
+
+    function initButton(aktif = 0) {
+        if(aktif === 0) {
+            setDisabled('btn_tambah', false);
+            setDisabled('btn_edit');
+            setDisabled('btn_simpan');
+            setDisabled('btn_batal');
+        }else {
+            setDisabled('btn_tambah');
+            setDisabled('btn_edit', true);
+            setDisabled('btn_simpan', false);
+            setDisabled('btn_batal', false);
+        }
+        
+    }
+
+    function initFormInput(edit = false) {
+        // $('#btnShowHide').trigger('click');
+        if(!edit) {
+            $('#formKomplain').css({'pointer-events': 'none', 'opacity': '0.95'});
+        }else {
+            $('#formKomplain').css({'pointer-events': 'auto', 'opacity': '1'});
+        }
+    }
+
+    async function getLastId() {
+        // Swal.showLoading();
+        
+        resId = await $.ajax({
+            url: path + '/komplain/getIdKomplain/',
+            method: 'GET',
+            success: function(data) {
+                
+            }
+        })
+
+        var currId = '';
+        if(resId.length > 0) {
+            var id = parseInt(resId[0].MDKOMPLAIN_ID);
+            id++;
+
+            console.log(id.toString.length);
+            if(id.toString.length < 2) {
+                currId = 'KP00' + id;
+            }else if(id.toString.length < 3) {
+                currId = 'KP0' + id;
+            }else {
+                currId = 'KP' + id;
+            }
+        }else {
+            currId = 'KP001';
+        }
+        
+        $('#idKomplain').val(currId);
+        // Swal.close();
+
+        // if(resId.length > 0) {
+        //     setGridDataKomplain();
+        // }
+    }
+
+    $('#btn_tambah').click(function() {
+        expanForm(true);
+        initButton(1);
+        clearForm();
+        initFormInput(true);
+        getLastId();
+        $('#judulKomplain').focus();
+        if(!expandState) {
+            $('#btnShowHide').trigger('click', [ false ]);
+            expandState = true;
+        }
+    })
+
+    $('#btn_edit').click(function() {
+        editing = true;
+        setDisabled('btn_tambah');
+        setDisabled('btn_edit');
+        setDisabled('btn_simpan', false);
+        setDisabled('btn_batal', false);
+        initFormInput(true);
+        $('#idKomplain').prop('disabled', true);
+        expanForm(true);
+    })
+
+    $('#btn_batal').click(function() {
+        // expanForm(false);
+        initButton(0);
+        clearForm();
+        initFormInput();
+    })
+
+    $('#btn_simpan').click(function() {
+        saveKomplain();
+    })
+
+    $('#btn_keluar').click(function() {
+        window.location = path;
+    })
+
+    $('#btnShowHide').click(function(e, expand = true) {
+        if($(this).hasClass('fa-solid fa-angles-up')) {
+            if(expand) {
+                expanForm(false);
+            }
+            $(this).removeClass('fa-solid fa-angles-up');
+            $(this).addClass('fa-solid fa-angles-down');
+
+            if(expandState) {
+                expandState = false;
+            }
+        }else {
+            if(expand) {
+                expanForm(true);
+            }
+            $(this).removeClass('fa-solid fa-angles-down');
+            $(this).addClass('fa-solid fa-angles-up');
+
+            if(!expandState) {
+                expandState = true;
+            }
+        }
+    })
+
+    function saveKomplain() {
+        // console.log($('#gambarKomplain')[0].files[0]);
+        // return;
+
+        if($('#idKomplain').val().trim() === '' || $('#judulKomplain').val().trim() === '' || $('#ketKomplain').val().trim() === '') {
+            Swal.fire({
+                html: '<span style="font-size: 14px">Komplain harus diisi!</span>',
+                icon: 'error',
+            }).then((result) => {
+                $('#judulKomplain').focus();
+            })
+
+            return;
+        }
+
+        Swal.showLoading();
+
+        var formData = new FormData();
+
+        formData.append('idKomplain', $('#idKomplain').val());
+        formData.append('judulKomplain', $('#judulKomplain').val());
+        formData.append('ketKomplain', $('#ketKomplain').val());
+        formData.append('pelaporKomplain', $('#pelaporKomplain').val());
+        formData.append('pjKomplain', $('#pjKomplain').val());
+        formData.append('gambarKomplain', ($('#gambarKomplain')[0].files[0] !== undefined) ? $('#gambarKomplain')[0].files[0] : null);
+        formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+
+
+        $.ajax({
+            url: path + '/komplain/saveKomplain/',
+            method: 'POST',
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(data) {
+                showToast('', data.message);
+                initButton(0);
+                clearForm();
+                initFormInput();
+                getDataKomplain();
+                deleting = false;
+                // expanForm(false);
+            }
+        })
+    }
+
+    function deleteKomplain(id) {
+        if(id.trim() === '') {
+            Swal.fire({
+                html: '<span style="font-size: 14px">Tidak ada data yang dipilih!</span>',
+                icon: 'error',
+            });
+
+            return;
+        }
+
+        Swal.fire({
+            html: '<span style="font-size: 14px;">Hapus data yang dipilih ?</span>',
+            icon: 'question',
+            confirmButtonText: 'Ya',
+            showCancelButton: true,
+            cancelButtonText: 'Tidak',
+        }).then((result) => {
+            if(result.isConfirmed) {
+                if (result.value) {
+                    $.ajax({
+                        url: path + '/komplain/deleteKomplain/',
+                        method: 'POST',
+                        data: {
+                            'idKomplain': id,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        },
+                        success: function(data) {
+                            showToast('', data.message);
+                            initButton(0);
+                            clearForm();
+                            initFormInput();
+                            getDataKomplain();
+                            // expanForm(false);
+                        }
+                    })
+                }
+            }else {
+                deleting = false;
+                if(deleting) {
+                    clearForm();
+                }
+            }
+        })
+    }
+
+    $("#ketKomplain").on('change', function() {
+        if ($(this).is(':checked')) {
+            ketKomplain = $(this).is(':checked');
+            // alert(ketKomplain);// To verify
+        }
+        else {
+            ketKomplain = $(this).is(':checked');
+            // alert(ketKomplain);// To verify
+        }
+    });
+
+    async function getDataKomplain() {
+        resKomplain = await $.ajax({
+            url: path + '/komplain/getKomplain/',
+            method: 'GET',
+            success: function(data) {
+                
+            }
+        })
+
+        // if(resKomplain.length > 0) {
+        setGridDataKomplain();
+        // }
+    }
+
+    function showImage(val) {
+        showImageState = true;
+        
+        Swal.fire({
+            imageUrl: val,
+            imageWidth: 1400,
+            // imageHeight: 750,
+            width: 1500,
+        }).then((result) => {
+            showImageState = false;
+        })
+    }
+
+    function editStatus(id, status) {
+        console.log('Status: ', id + ' | ' + status);
+        console.log(window.location.origin);
+        
+        Swal.fire({
+            title: 'EDIT STATUS',
+            // icon: 'warning',
+            width: 800,
+            position: 'top',
+            html:
+                '<div style="text-align: left;float: left; width: 100%;">\
+                    <input type="text" id="idAduan" class="swal2-input" readonly>\
+                </div>\
+                <div>\
+                    <div class="col-md-12" style="text-align: left; margin-top: 30px;margin-bottom: 30px; max-height: 500px; overflow: auto; position: sticky; top: 0; z-index: 1;">\
+                        <div>\
+                            <label><input type="radio" id="status0" name="status" value="0"> Belum diproses</label>\
+                        </div>\
+                        <div>\
+                            <label><input type="radio" id="status1" name="status" value="1"> Diproses</label>\
+                        </div>\
+                        <div>\
+                            <label><input type="radio" id="status2" name="status" value="2"> Selesai</label>\
+                        </div>\
+                    </div>\
+                </div>',
+            confirmButtonText: 'Simpan',
+            showCancelButton: true,
+            cancelButtonText: 'Tutup',
+            focusConfirm: false,
+            allowOutsideClick: false,
+            allowEscapeKey : false,
+            preConfirm: async () => {
+                var idAduan = $('#idAduan').val();
+                var newStatus = $("input[name='status']:checked").val();
+                
+                if(status === '') {
+                    Swal.showValidationMessage('<span style="font-size: 14px;">Status harus dipilih!</span>')
+                }else {
+                    const success = await $.ajax({
+                        type:'post',
+                        url: window.location.origin + '/komplain/updateStatus/',
+                        data: {
+                            'idKomplain': idAduan,
+                            'status': newStatus,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}'
+                        },
+                        success: function(result) {
+                            getDataKomplain();
+                        }
+                    })
+                    if(success.status === 'error') {
+                        Swal.showValidationMessage('<span style="font-size: 14px;">' + success.message + '</span>');
+                    }else {
+                        clearForm();
+                        Swal.showValidationMessage('<span style="font-size: 14px;">' + success.message + '</span>');
+                    }
+                }
+
+            },
+            // preDeny: async () => {
+            //     if(id_delegasi !== '') {
+            //         const success = await $.ajax({
+            //             url: window.location.origin + '/emr-rawat-inap/deleteDelegasiDokter/',
+            //             method: "POST",
+            //             data: {
+            //                 'id': id_delegasi,
+            //                 'csrfmiddlewaretoken': '{{ csrf_token }}',
+            //             },
+            //             success: function(result) {
+            //                 // alert(result.message);
+            //                 // setExistingDelegasiDokter();
+            //             }
+            //         })
+            //         if(success.status === 'error') {
+            //             Swal.showValidationMessage('<span style="font-size: 14px;">' + success.message + '</span>');
+            //         }else {
+            //             clearForm();
+            //             Swal.showValidationMessage('<span style="font-size: 14px;">' + success.message + '</span>');
+            //             // setExistingDelegasiDokter();
+            //             // return success;
+            //         }
+            //     }else {
+            //         Swal.showValidationMessage('<span style="font-size: 14px;">Pilih data yang ingin dihapus!</span>');
+            //     }
+            //     return false;
+            // },
+            didOpen: setDefaultStatus,
+        }).then(async (result) => {
+            if (result.dismiss) {
+
+            }else if(result.isConfirmed) {
+                if (result.value) {
+                    // alert(result.value.message)
+                    // showDelegasiDokter = false;
+                }
+            }
+        })
+
+        function setDefaultStatus() {
+            $('#idAduan').val(id);
+            $('#status' + status).prop('checked', true);
+        }
+    }
+
+    function cetakReport() {
+        $.ajax({
+            url: path + '/report/get/',
+            method: 'GET',
+            success: function(data) {
+                console.log(data);
+                window.open(data.pdf, '_blank');
+            }
+        })
+    }
+
+    async function setGridDataKomplain() {
+        // var url = path + '/divisi/getDivisi';
+        // console.log(url);
+
+        $i = 0;
+        var kolom = [
+            {
+                caption: "No",
+                dataField: "no",
+                alignment: "center",
+                width: 40,
+                // cellTemplate: function(cellElement, cellInfo) {
+                //     $('<span>' + (cellInfo.rowIndex + $i + 1) + '</span>').appendTo(cellElement);
+                // },
+            },
+            {
+                caption: "ID Komplain",
+                dataField: "MDKOMPLAIN_ID",
+                alignment: "left",
+                width: 150,
+            },
+            {
+                caption: "Judul Komplain",
+                dataField: "MDKOMPLAIN_JUDUL",
+                alignment: "left",
+                // calculateCellValue: function(rowData) {
+                //     console.log(rowData);
+                //     return rowData.MDKOMPLAIN_JUDUL;
+                // }
+            },
+            {
+                caption: "Keterangan",
+                dataField: "MDKOMPLAIN_KETERANGAN",
+                alignment: "left",
+                // customizeText: function(options) {
+                //     console.log(options);
+                //     if(options.value === true) {
+                //         return "Aktif";
+                //     }else {
+                //         return "Tidak Aktif";
+                //     }
+                // },
+            },
+            {
+                caption: "Pelapor",
+                dataField: "MDKOMPLAIN_PELAPOR",
+                alignment: "left",
+            },
+            {
+                caption: "Penanggung Jawab",
+                dataField: "MDKOMPLAIN_PJ",
+                alignment: "left",
+                groupIndex: 0,
+            },
+            {
+                caption: "Gambar",
+                dataField: "MDKOMPLAIN_GAMBAR",
+                alignment: "center",
+                cellTemplate: function(cellElement, cellInfo) {
+                    // console.log(cellInfo.value);
+                    var img =  cellInfo.value;
+                    // $('<a href="' + path + '/' + img + '" target="_blank"><i class="fa-solid fa-image" style="font-size: 20px;"></i></a>').appendTo(cellElement);
+
+                    $('<span onclick="showImage(\'' + path + '/' + img + '\')"><i class="fa-solid fa-image" style="font-size: 20px;"></i></span>').appendTo(cellElement);
+                }
+            },
+            {
+                caption: "Status",
+                dataField: "status_komplain",
+                alignment: "left",
+            },
+            {
+                width: 100,
+                caption: "Opsi",
+                alignment: 'center',
+                cellTemplate: function (container, options) {
+                    $('<span style="margin-right: 20px;"><i class="fa-solid fa-pen-to-square"></i></span>').addClass('dx-link')
+                        .on('dxclick', function (e) {
+                            editStatus(options.data.MDKOMPLAIN_ID, options.data.MDSTATUS);
+                        })
+                        .appendTo(container);
+
+                    $('<span style="margin-right: 0px;"><i class="fa-solid fa-trash"></i></span>').addClass('dx-link')
+                        .on('dxclick', function (e) {
+                            deleting = true;
+                            deleteKomplain(options.data.MDKOMPLAIN_ID);
+                        })
+                        .appendTo(container);
+
+                    // $('<span style="margin-right: 20px;"><i class="fa-solid fa-print"></i></span>').addClass('dx-link')
+                    //     .on('dxclick', function (e) {
+                    //         cetakReport();
+                    //     })
+                    //     .appendTo(container);
+                }
+            },
+        ]
+
+        $('#gridKomplain').dxDataGrid({
+            showColumnLines: false,
+            showRowLines: true,
+            showBorders: true,
+            filterRow: { visible: false },
+            headerFilter: { visible: true },
+            searchPanel: {
+                visible: true,
+                width: 400,
+                placeholder: 'Cari Data Komplain...'
+            },
+            dataSource: resKomplain,
+            columnAutoWidth: true,
+            selection: {
+                mode: "single",
+            },
+            paging: {
+                pageIndex: 0,
+                pageSize: 20,
+            },
+            hoverStateEnabled: true,
+            columns: kolom,
+            onOptionChanged: function(e) {
+                if(e.fullName === "paging.pageIndex") {
+                    $i = e.value * 20;
+                }
+            },
+            onRowClick: function(e) {
+                // console.log(expandState);
+
+                if (!selectionChangedRaised) {
+                    var dataGrid = e.component;
+                    var keys = dataGrid.getSelectedRowKeys();
+                    dataGrid.deselectRows(keys);
+
+                    if(!deleting) {
+                        clearForm();
+                        setDisabled('btn_edit');
+                        // expanForm(false);
+                    }
+                    
+                    initButton(0);
+                    initFormInput();
+                    
+                }else {
+                    if(e.rowType === 'data') {
+                        $('#idKomplain').val(e.data.MDKOMPLAIN_ID);
+                        $('#judulKomplain').val(e.data.MDKOMPLAIN_JUDUL);
+                        $('#ketKomplain').val(e.data.MDKOMPLAIN_KETERANGAN);
+                        $('#pelaporKomplain').val(e.data.MDKOMPLAIN_PELAPOR);
+                        $('#pjKomplain').val(e.data.MDKOMPLAIN_PJ);
+                    }
+
+                    if(!editing) {
+                        setDisabled('btn_edit', false);
+                        expanForm(true);
+                        if(!expandState) {
+                            $('#btnShowHide').trigger('click', [ false ]);
+                            expandState = true;
+                        }
+                    }
+
+                    selectionChangedRaised = false;
+                }
+
+            },
+            onSelectionChanged: function (selectedItems) {
+                selectionChangedRaised = true;
+            },
+            onRowPrepared: function(data) {
+                // console.log(data);
+                if(data.rowType === 'data') {
+                    if(data.data.MDSTATUS === '1') {
+                        data.rowElement.addClass('row-diproses');
+                    }else if(data.data.MDSTATUS === '2') {
+                        data.rowElement.addClass('row-selesai');
+                    }
+                }
+            },
+            summary: {
+                totalItems: [{
+                    displayFormat: "Total: {0}",
+                    column: "MDKOMPLAIN_JUDUL",
+                    summaryType: "count",
+                }]
+            },
+            grouping: {
+                contextMenuEnabled: true
+            },
+            groupPanel: {
+                visible: true   // or "auto"
+            },
+            
+            // onCellClick(e) {
+            //     console.log(e);
+            //     if (e.isSelected) {
+            //         e.component.clearSelection();
+            //     }
+            // },
+        })
+    }
+
+
+</script>

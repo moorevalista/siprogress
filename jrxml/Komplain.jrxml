@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Komplain" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d9d66783-ae43-40b6-a7ac-6f304d81d3ba">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter1.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[Select * from MDKOMPLAIN]]>
+	</queryString>
+	<field name="MDKOMPLAIN_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MDKOMPLAIN_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="MDKOMPLAIN_ID"/>
+	</field>
+	<field name="MDKOMPLAIN_JUDUL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MDKOMPLAIN_JUDUL"/>
+		<property name="com.jaspersoft.studio.field.label" value="MDKOMPLAIN_JUDUL"/>
+	</field>
+	<field name="MDKOMPLAIN_GAMBAR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MDKOMPLAIN_GAMBAR"/>
+		<property name="com.jaspersoft.studio.field.label" value="MDKOMPLAIN_GAMBAR"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="MDKOMPLAIN"/>
+	</field>
+	<field name="MDKOMPLAIN_KETERANGAN" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MDKOMPLAIN_KETERANGAN"/>
+		<property name="com.jaspersoft.studio.field.label" value="MDKOMPLAIN_KETERANGAN"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="MDKOMPLAIN"/>
+	</field>
+	<field name="MDKOMPLAIN_PELAPOR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MDKOMPLAIN_PELAPOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="MDKOMPLAIN_PELAPOR"/>
+	</field>
+	<field name="MDKOMPLAIN_PJ" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MDKOMPLAIN_PJ"/>
+		<property name="com.jaspersoft.studio.field.label" value="MDKOMPLAIN_PJ"/>
+	</field>
+	<field name="MDSTATUS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MDSTATUS"/>
+		<property name="com.jaspersoft.studio.field.label" value="MDSTATUS"/>
+	</field>
+	<variable name="MDKOMPLAIN_PJ1" class="java.lang.Integer" resetType="Group" resetGroup="GroupPJ" calculation="Count">
+		<variableExpression><![CDATA[$F{MDKOMPLAIN_PJ}]]></variableExpression>
+	</variable>
+	<variable name="MDKOMPLAIN_ID1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{MDKOMPLAIN_ID}]]></variableExpression>
+	</variable>
+	<group name="GroupPJ">
+		<groupExpression><![CDATA[$F{MDKOMPLAIN_PJ}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<textField>
+					<reportElement x="0" y="0" width="100" height="20" uuid="fec26c2d-ff23-43fa-9fe3-1ab36d3f0e03"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MDKOMPLAIN_PJ}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="19" uuid="6878e43b-e87a-40c5-9273-5358821ebc65">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51afb9c4-f437-4fb9-95b3-698e8cb17f6a"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Judul Komplain]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="19" uuid="0d175914-591a-4dea-925f-0f13b6a71068">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d137e1ae-f9b0-4941-8981-22122f1a2d4a"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gambar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="19" uuid="4aa1f522-4c57-46d1-b34d-2a93831ce35a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3db29ac-48a8-4657-a834-2c0d5e978783"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MDKOMPLAIN_PJ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="83" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="180" height="24" uuid="049b2662-1dbf-41dc-89a0-cac03c335461">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51afb9c4-f437-4fb9-95b3-698e8cb17f6a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{MDKOMPLAIN_JUDUL}]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement x="180" y="0" width="80" height="79" uuid="35eb0e1a-25c8-49a9-8e6a-fdd6d968fefb"/>
+				<imageExpression><![CDATA["http://localhost:8000/" + $F{MDKOMPLAIN_GAMBAR}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="24" uuid="90efbf1a-a835-4383-917f-dfae9fe67f8c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3db29ac-48a8-4657-a834-2c0d5e978783"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{MDKOMPLAIN_PJ}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="320" y="19" width="100" height="30" uuid="301353b6-8554-4b5b-a728-91048d7e1d1f"/>
+				<textFieldExpression><![CDATA[$V{MDKOMPLAIN_ID1} + " Records"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -47,6 +47,15 @@ urlpatterns = [
             ]
         ),
     ),
+    url(r'^report/',
+        include(
+            [
+                url(r"^$", views.reportPage, name="report"),
+                url(r"^get", views.reportGet, name="reportGet")
+            ]
+        )
+    ),
+
 
     # edit juan end
     url(

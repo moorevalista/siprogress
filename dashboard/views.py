@@ -362,4 +362,34 @@ def deleteAduan(request):
 	json_data = json.dumps(res, cls=DjangoJSONEncoder)
 	return HttpResponse(json_data, content_type="application/json")
 
+def reportPage(request):
+	is_login = checkLogin(request)
+
+	if(is_login[0]):
+		qnavbar = "SELECT * FROM PRIVILEGE_NAVBAR A\
+					RIGHT JOIN PROPERTIES_NAVBAR B ON A.NAVBAR_PRIV = B.id\
+					WHERE A.USER_PRIV = '" + is_login[1] + "'\
+					AND B.modul = 'e-komplain' ORDER BY B.parent ASC, B.nav_order ASC;"
+		
+		qmenubar = "SELECT * FROM PRIVILEGE_MENUBAR AS A\
+					RIGHT JOIN PROPERTIES_MENUBAR AS B ON A.MENUBAR_PRIV = B.id\
+					WHERE A.USER_PRIV = '" + is_login[1] + "'\
+					AND B.modul = 'e-komplain' AND B.submodul = 'komplain' order by id asc;"
+		
+		navbars = Globals().getData(qnavbar)
+		menubars = Globals().getData(qmenubar)
+
+		response = render(request, 'report/home/home.html', {'navbars':navbars, 'menubars':menubars})
+		response['Cache-Control'] = 'no-cache, no-store, max-age=0, must-revalidate'
+		return response
+	else:
+		return redirect('/login')
+
+def reportGet(request):
+	jasper_param = {}
+	report = Globals().generateReportDB('Komplain.jrxml', 'komplain', request.session['user_id'], jasper_param)
+	json_data = json.dumps(report, cls=DjangoJSONEncoder)
+
+	return HttpResponse(json_data, content_type="applicatino/json")
+
 # edit juan end
