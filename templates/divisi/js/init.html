@@ -1,0 +1,386 @@
+<script>
+    path = window.location.origin;
+    console.log(path);
+
+    resDivisi = [];
+
+    $(document).ready(function () {
+        initFormInput();
+        initButton();
+        getDataDivisi();
+
+        $('#btn_hapus').hide();
+    })
+
+    var statusDivisi = false;
+    var deleting = false;
+    var editing = false;
+
+    function showToast(title, msg, icon = 'success') {
+        let timerInterval;
+        Swal.fire({
+        title: title,
+        html: '<span style="font-size: 18px;">' + msg + '</span>',
+        icon: icon,
+        timer: 1500,
+        timerProgressBar: true,
+        // position: 'top',
+        backdrop: false,
+        allowOutsideClick: false,
+        background: 'rgba(255, 255, 255, 0.8)',
+        // color: 'white',
+        didOpen: () => {
+            Swal.showLoading();
+        },
+        willClose: () => {
+            clearInterval(timerInterval);
+        }
+        }).then((result) => {
+        });
+    }
+
+    function clearForm() {
+        $('#kodeDivisi').val('');
+        $('#namaDivisi').val('');
+        $('#statusDivisi').prop('checked', false);
+
+        $('#kodeDivisi').prop('disabled', true);
+        editing = false;
+    }
+
+    function setDisabled(id, disabled = true) {
+        $('#' + id).attr('disabled', disabled);
+    }
+
+    function initButton(aktif = 0) {
+        if(aktif === 0) {
+            setDisabled('btn_tambah', false);
+            setDisabled('btn_edit');
+            setDisabled('btn_simpan');
+            setDisabled('btn_batal');
+        }else {
+            setDisabled('btn_tambah');
+            setDisabled('btn_edit', true);
+            setDisabled('btn_simpan', false);
+            setDisabled('btn_batal', false);
+        }
+        
+    }
+
+    function initFormInput(edit = false) {
+        if(!edit) {
+            $('#formDivisi').css({'pointer-events': 'none', 'opacity': '0.9'});
+        }else {
+            $('#formDivisi').css({'pointer-events': 'auto', 'opacity': '1'});
+        }
+    }
+
+    async function getLastId() {
+        // Swal.showLoading();
+        
+        resId = await $.ajax({
+            url: path + '/divisi/getIdDivisi/',
+            method: 'GET',
+            success: function(data) {
+                
+            }
+        })
+
+        var currId = '';
+        if(resId.length > 0) {
+            var id = parseInt(resId[0].kode_divisi);
+            id++;
+
+            console.log(id.toString.length);
+            if(id.toString.length < 2) {
+                currId = 'DV00' + id;
+            }else if(id.toString.length < 3) {
+                currId = 'DV0' + id;
+            }else {
+                currId = 'DV' + id;
+            }
+        }else {
+            currId = 'DV001';
+        }
+        
+        $('#kodeDivisi').val(currId);
+        // Swal.close();
+
+        // if(resId.length > 0) {
+        //     setGridDataDivisi();
+        // }
+    }
+
+    $('#btn_tambah').click(function() {
+        initButton(1);
+        clearForm();
+        initFormInput(true);
+        getLastId();
+        $('#namaDivisi').focus();
+    })
+
+    $('#btn_edit').click(function() {
+        editing = true;
+        setDisabled('btn_tambah');
+        setDisabled('btn_edit');
+        setDisabled('btn_simpan', false);
+        setDisabled('btn_batal', false);
+        initFormInput(true);
+        $('#kodeDivisi').prop('disabled', true);
+    })
+
+    $('#btn_batal').click(function() {
+        initButton(0);
+        clearForm();
+        initFormInput();
+    })
+
+    $('#btn_simpan').click(function() {
+        saveDivisi();
+    })
+
+    $('#btn_keluar').click(function() {
+        window.location = path;
+    })
+
+    function saveDivisi() {
+        if($('#kodeDivisi').val().trim() === '' || $('#namaDivisi').val().trim() === '') {
+            Swal.fire({
+                html: '<span style="font-size: 14px">Nama divisi harus diisi!</span>',
+                icon: 'error',
+            }).then((result) => {
+                $('#namaDivisi').focus();
+            })
+
+            return;
+        }
+
+        Swal.showLoading();
+
+        $.ajax({
+            url: path + '/divisi/saveDivisi/',
+            method: 'POST',
+            data: {
+                'kode_divisi': $('#kodeDivisi').val(),
+                'nama_divisi': $('#namaDivisi').val(),
+                'status': ($('#statusDivisi').is(':checked') === true) ? 1 : 0,
+                'csrfmiddlewaretoken': '{{ csrf_token }}',
+            },
+            success: function(data) {
+                showToast('', data.message);
+                initButton(0);
+                clearForm();
+                initFormInput();
+                getDataDivisi();
+                deleting = false;
+            }
+        })
+    }
+
+    function deleteDivisi(id) {
+        if(id.trim() === '') {
+            Swal.fire({
+                html: '<span style="font-size: 14px">Tidak ada data yang dipilih!</span>',
+                icon: 'error',
+            });
+
+            return;
+        }
+
+        Swal.fire({
+            html: '<span style="font-size: 14px;">Hapus data yang dipilih ?</span>',
+            icon: 'question',
+            confirmButtonText: 'Ya',
+            showCancelButton: true,
+            cancelButtonText: 'Tidak',
+        }).then((result) => {
+            if(result.isConfirmed) {
+                if (result.value) {
+                    $.ajax({
+                        url: path + '/divisi/deleteDivisi/',
+                        method: 'POST',
+                        data: {
+                            'kode_divisi': id,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        },
+                        success: function(data) {
+                            showToast('', data.message);
+                            initButton(0);
+                            clearForm();
+                            initFormInput();
+                            getDataDivisi();
+                        }
+                    })
+                }
+            }else {
+                deleting = false;
+                if(deleting) {
+                    clearForm();
+                }
+            }
+        })
+    }
+
+    $("#statusDivisi").on('change', function() {
+        if ($(this).is(':checked')) {
+            statusDivisi = $(this).is(':checked');
+            // alert(statusDivisi);// To verify
+        }
+        else {
+            statusDivisi = $(this).is(':checked');
+            // alert(statusDivisi);// To verify
+        }
+    });
+
+    async function getDataDivisi() {
+        resDivisi = await $.ajax({
+            url: path + '/divisi/getDivisi/',
+            method: 'GET',
+            success: function(data) {
+                
+            }
+        })
+
+        // if(resDivisi.length > 0) {
+        setGridDataDivisi();
+        // }
+    }
+
+    async function setGridDataDivisi() {
+        // var url = path + '/divisi/getDivisi';
+        // console.log(url);
+
+        $i = 0;
+        var kolom = [
+            {
+                caption: "No",
+                alignment: "center",
+                width: 40,
+                cellTemplate: function(cellElement, cellInfo) {
+                    $('<span>' + (cellInfo.rowIndex + $i + 1) + '</span>').appendTo(cellElement);
+                }
+            },
+            {
+                caption: "Kode Divisi",
+                dataField: "kode_divisi",
+                alignment: "left",
+                width: 150,
+            },
+            {
+                caption: "Nama Divisi",
+                dataField: "nama_divisi",
+                alignment: "left",
+            },
+            {
+                caption: "Status",
+                dataField: "status",
+                alignment: "center",
+                // customizeText: function(options) {
+                //     console.log(options);
+                //     if(options.value === true) {
+                //         return "Aktif";
+                //     }else {
+                //         return "Tidak Aktif";
+                //     }
+                // },
+            },
+            {
+                width: 100,
+                caption: "Opsi",
+                alignment: 'center',
+                cellTemplate: function (container, options) {
+                    // $('<span style="margin-right: 20px;"><i class="fa-solid fa-pen-to-square"></i></span>').addClass('dx-link')
+                    //     // .text('Ubah')
+                    //     .on('dxclick', function () {
+                    //         alert("Edit");
+                    //     })
+                    //     .appendTo(container);
+                    
+                    $('<span style="margin-right: 0px;"><i class="fa-solid fa-trash"></i></span>').addClass('dx-link')
+                        // .text('Ubah')
+                        .on('dxclick', function (e) {
+                            // alert("Hapus");
+                            // if(!options.row.isSelected) {
+                            deleting = true;
+                            deleteDivisi(options.data.kode_divisi);
+                            // }
+                            
+                        })
+                        .appendTo(container);
+                }
+            },
+        ]
+
+        $('#gridDivisi').dxDataGrid({
+            showColumnLines: false,
+            showRowLines: true,
+            showBorders: true,
+            filterRow: { visible: false },
+            headerFilter: { visible: true },
+            searchPanel: {
+                visible: true,
+                width: 400,
+                placeholder: 'Cari Divisi...'
+            },
+            dataSource: resDivisi,
+            columnAutoWidth: true,
+            selection: {
+                mode: "single",
+            },
+            paging: {
+                pageIndex: 0,
+                pageSize: 20,
+            },
+            hoverStateEnabled: true,
+            columns: kolom,
+            onOptionChanged: function(e) {
+                if(e.fullName === "paging.pageIndex") {
+                    $i = e.value * 20;
+                }
+            },
+            onRowClick: function(e) {
+                // console.log(e);
+
+                if (!selectionChangedRaised) {
+                    var dataGrid = e.component;
+                    var keys = dataGrid.getSelectedRowKeys();
+                    dataGrid.deselectRows(keys);
+
+                    if(!deleting) {
+                        clearForm();
+                        setDisabled('btn_edit');
+                    }
+                    
+                    initButton(0);
+                    initFormInput();
+                    
+                }else {
+                    if(e.rowType === 'data') {
+                        $('#kodeDivisi').val(e.data.kode_divisi);
+                        $('#namaDivisi').val(e.data.nama_divisi);
+                        $('#statusDivisi').prop('checked', (e.data.status === 'Aktif') ? true : false);
+                    }
+
+                    if(!editing) {
+                        setDisabled('btn_edit', false);
+                    }
+
+                    selectionChangedRaised = false;
+                }
+
+            },
+            onSelectionChanged: function (selectedItems) {
+                selectionChangedRaised = true;
+            },
+            
+            // onCellClick(e) {
+            //     console.log(e);
+            //     if (e.isSelected) {
+            //         e.component.clearSelection();
+            //     }
+            // },
+        })
+    }
+
+
+</script>

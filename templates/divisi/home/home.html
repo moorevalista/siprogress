@@ -1,0 +1,81 @@
+{% extends "layout/base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+siprogress
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/plugins/css-toggle-switch/toggle-switch.css' %}">
+<link rel="stylesheet" href="{% static 'css/plugins/iCheck/custom.css' %}">
+<link rel="stylesheet" href="{% static 'css/dxtreeview.css' %}">
+<style>
+    body {
+        /* background-color: deepskyblue; */
+        background-image: url("/static/img/rajal.png") !important;
+        height: 100%;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        padding-right: 0 !important
+    }
+
+    
+</style>
+{% endblock %}
+
+{% block content %}
+    <div id="formDivisi" class="col-md-2" style="background-color: whitesmoke; padding: 10px; float: left; border-radius: 10px;">
+        <div class="custom-card">
+            <div class="block-heading">
+                <h2 class="text-info">TAMBAH DIVISI</h2>
+            </div>
+            <form>
+                <div class="col-md-12" style="float: left;">
+                    <div class="col-md-12" style="float: left; margin-bottom: 15px">
+                        <label class="form-label" for="kodeDivisi">Kode Divisi</label>
+                        <input id="kodeDivisi" class="form-control item" type="text" />
+                    </div>
+                    <div class="col-md-12" style="float: left; margin-bottom: 15px;">
+                        <label class="form-label" for="namaDivisi">Nama Divisi</label>
+                        <input id="namaDivisi" class="form-control item mb-12" type="text" />
+                    </div>
+                    <div class="col-md-12" style="float: left; margin-bottom: 15px;">
+                        <label class="form-label" for="statusDivisi">Status Aktif</label>
+                        <div>
+                        <label class="switch">
+                            <input type="checkbox" id="statusDivisi">
+                            <span class="slider round"></span>
+                        </label>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-12" style="float: left;">
+                        <button class="btn btn-primary" type="submit" style="float: right;">Simpan</button>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-10" style="float: left; padding-left: 10px;">
+        <div class="col-md-12" style="background-color: whitesmoke; padding: 10px; float: left; border-radius: 10px;">
+            <section class="clean-block clean-product dark" style="width: 100%; background-color: whitesmoke; padding: 10px; float: left; border-radius: 10px;">
+                <div class="col-md-12">
+                    <div class="block-heading">
+                        <span class="text-info" style="font-size: 24px;">MASTER DATA DIVISI</span>
+                        <div id="gridDivisi" class="table-responsive">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block script %}
+    <!-- <script type="text/javascript"> -->
+        
+    {% include 'divisi/js/init.html' %}
+    <!-- </script> -->
+{% endblock %}

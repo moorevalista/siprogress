@@ -1,0 +1,316 @@
+<script>
+    path = window.location.origin;
+
+    $(document).ready(function(){
+        $('#baseMenu').hide();
+        getDataListAduan1();
+    });
+       
+    var totalCount = 0;
+       
+    function getDataListAduan1(){
+        $.get('/listAduan/aduan/get', {}, function(data) {
+            gridListAduan1(data);
+        });
+    }
+
+    function gridListAduan1(datas){
+        $i = 0;
+        
+        $("#gridListAduan1").dxDataGrid({
+            showColumnLines: false,
+            showRowLines: true,
+            showBorders: true,
+            filterRow: { visible: true },
+            headerFilter: { visible: true },
+            searchPanel: {
+                visible: true,
+                width: 400,
+                placeholder: 'Cari Data Aduan...'
+            },
+            grouping: {
+                contextMenuEnabled: true
+            },
+            groupPanel: {
+                visible: true   // or "auto"
+            },
+            dataSource: datas,
+            selection: {
+            mode: "single"
+            },
+            hoverStateEnabled: true,
+            columns: [
+                {
+                    dataField: 'no',
+                    caption: "No",
+                    alignment: "center",
+                    width: 40,
+                    // cellTemplate: function(cellElement, cellInfo) {
+                    //     $('<span>' + (cellInfo.rowIndex + $i + 1) + '</span>').appendTo(cellElement);
+                    // }
+                },
+                {
+                    dataField: "EKANO_TRANSAKSI",
+                    caption: "EKANO_TRANSAKSI",
+                    calculateCellValue: function(rowData) {
+                        return 1;
+                    }
+                },
+                {
+                    dataField: "EKA_PELAPOR",
+                    caption: "EKA_PELAPOR"
+                },
+                {
+                    dataField: "EKA_UNIT_PELAPOR",
+                    caption: "EKA_UNIT_PELAPOR",
+                    groupIndex: 0,
+                },
+                {
+                    dataField: "EKA_ADUAN_KELUHAN",
+                    caption: "EKA_ADUAN_KELUHAN"
+                },
+                {
+                    dataField: "EKA_NO_WA",
+                    caption: "EKA_NO_WA"
+                },
+                {
+                    dataField: "EKA_STATUS",
+                    caption: "EKA_STATUS"
+                },
+                {
+                    dataField: "EKA_VERIF_USER",
+                    caption: "EKA_VERIF_USER"
+                },
+                {
+                    dataField: "EKA_VERIF_TGL",
+                    caption: "EKA_VERIF_TGL"
+                },
+                {
+                    width: 100,
+                    caption: "Opsi",
+                    alignment: 'center',
+                    cellTemplate: function (container, options) {
+                        $('<span style="margin-right: 20px;"><i class="fa-solid fa-pen-to-square"></i></span>').addClass('dx-link')
+                        // .text('Ubah')
+                        .on('dxclick', function (e) {
+                            editStatus(options.data.EKANO_TRANSAKSI);
+                        })
+                        .appendTo(container);
+
+                        $('<span style="margin-right: 0px;"><i class="fa-solid fa-trash"></i></span>').addClass('dx-link')
+                            .on('dxclick', function (e) {
+                                deleteAduan(options.data.EKANO_TRANSAKSI);                                
+                            })
+                            .appendTo(container);
+                    }
+                },
+            ],
+            summary: {
+                totalItems: [{
+                    displayFormat: "Total: {0}",
+                    column: "EKANO_TRANSAKSI",
+                    summaryType: "sum",
+                }]
+            },
+            onSelectionChanged: function (selectedItems) {
+                var data = selectedItems.selectedRowsData[0];
+                selectionChangedRaised = true;
+            },
+            onRowClick : function(e) {
+                if (!selectionChangedRaised) {
+                    var dataGrid = e.component;
+                    var keys = dataGrid.getSelectedRowKeys();
+                    dataGrid.deselectRows(keys);
+                }
+                selectionChangedRaised = false;
+            },
+            onRowPrepared: function(data) {
+                // console.log(data);
+                if(data.rowType === 'data') {
+                    if(data.data.EKA_STATUS === 'PROSES') {
+                        data.rowElement.addClass('row-diproses');
+                    }else if(data.data.EKA_STATUS === 'SELESAI') {
+                        data.rowElement.addClass('row-selesai');
+                    }
+                }
+            },
+            onOptionChanged: function(e) {
+                if(e.fullName === "paging.pageIndex") {
+                    $i = e.value * 20;
+                }
+            },
+            onContentReady (e) {
+                totalCount = e.component.totalCount();
+                $('#totalCount').html('Total rows : ' + totalCount);
+            },
+        });
+    }
+
+    function showToast(title, msg, icon = 'success') {
+        let timerInterval;
+        Swal.fire({
+        title: title,
+        html: '<span style="font-size: 18px;">' + msg + '</span>',
+        icon: icon,
+        timer: 1500,
+        timerProgressBar: true,
+        // position: 'top',
+        backdrop: false,
+        allowOutsideClick: false,
+        background: 'rgba(255, 255, 255, 0.8)',
+        // color: 'white',
+        didOpen: () => {
+            Swal.showLoading();
+        },
+        willClose: () => {
+            clearInterval(timerInterval);
+        }
+        }).then((result) => {
+        });
+    }
+
+    function editStatus(id) {
+        Swal.fire({
+            title: 'EDIT STATUS',
+            // icon: 'warning',
+            width: 800,
+            position: 'top',
+            html:
+                '<div style="text-align: left;float: left; width: 100%;">\
+                    <input type="text" id="idAduan" class="swal2-input" readonly>\
+                </div>\
+                <div>\
+                    <div class="col-md-12" style="margin-top: 30px;margin-bottom: 30px; max-height: 500px; overflow: auto; position: sticky; top: 0; z-index: 1;">\
+                        <div>\
+                            <label for="status"><input type="radio" id="status" name="status" value="LAPOR"> LAPOR</label>\
+                        </div>\
+                        <div>\
+                            <label for="status"><input type="radio" id="status" name="status" value="PROSES"> PROSES</label>\
+                        </div>\
+                        <div>\
+                            <label for="status"><input type="radio" id="status" name="status" value="SELESAI"> SELESAI</label>\
+                        </div>\
+                    </div>\
+                </div>',
+            confirmButtonText: 'Simpan',
+            showCancelButton: true,
+            cancelButtonText: 'Tutup',
+            showDenyButton: true,
+            denyButtonText: 'Hapus',
+            focusConfirm: false,
+            allowOutsideClick: false,
+            allowEscapeKey : false,
+            preConfirm: async () => {
+                var kd_dokter1 = document.getElementById('kd_dokter1').value;
+                var kd_dokter2 = document.getElementById('kd_dokter2').value;
+                var tanggal_delegasi = moment(document.getElementById('tanggal_delegasi').value).format('YYYY-MM-DD');
+                
+                if(kd_dokter1 === '') {
+                    Swal.showValidationMessage('<span style="font-size: 14px;">Dokter DPJP harus diisi!</span>')
+                }else if(kd_dokter2 === '') {
+                    Swal.showValidationMessage('<span style="font-size: 14px;">Dokter delegasi harus diisi!</span>')
+                }else if(tanggal_delegasi === 'Invalid date') {
+                    Swal.showValidationMessage('<span style="font-size: 14px;">Tanggal harus diisi!</span>')
+                }else {
+                    const success = await $.ajax({
+                        type:'post',
+                        url: window.location.origin + '/emr-rawat-inap/saveDelegasiDokter/',
+                        data: {
+                            'id': id_delegasi,
+                            'kd_dokter1': kd_dokter1,
+                            'kd_dokter2': kd_dokter2,
+                            'tanggal': tanggal_delegasi,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}'
+                        },
+                        success: function(result) {
+                            // if(result.status === 'error') {
+                            //     return result.messages;
+                            // }
+                        }
+                    })
+                    if(success.status === 'error') {
+                        Swal.showValidationMessage('<span style="font-size: 14px;">' + success.message + '</span>');
+                    }else {
+                        clearForm();
+                        Swal.showValidationMessage('<span style="font-size: 14px;">' + success.message + '</span>');
+                        // setExistingDelegasiDokter();
+                        // return success;
+                    }
+                }
+
+            },
+            preDeny: async () => {
+                if(id_delegasi !== '') {
+                    const success = await $.ajax({
+                        url: window.location.origin + '/emr-rawat-inap/deleteDelegasiDokter/',
+                        method: "POST",
+                        data: {
+                            'id': id_delegasi,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        },
+                        success: function(result) {
+                            // alert(result.message);
+                            // setExistingDelegasiDokter();
+                        }
+                    })
+                    if(success.status === 'error') {
+                        Swal.showValidationMessage('<span style="font-size: 14px;">' + success.message + '</span>');
+                    }else {
+                        clearForm();
+                        Swal.showValidationMessage('<span style="font-size: 14px;">' + success.message + '</span>');
+                        // setExistingDelegasiDokter();
+                        // return success;
+                    }
+                }else {
+                    Swal.showValidationMessage('<span style="font-size: 14px;">Pilih data yang ingin dihapus!</span>');
+                }
+                return false;
+            },
+            // didOpen: setExistingDelegasiDokter,
+        }).then(async (result) => {
+            if (result.dismiss) {
+                showDelegasiDokter = false;
+            }else if(result.isConfirmed) {
+                if (result.value) {
+                    alert(result.value.message)
+                    // showDelegasiDokter = false;
+                }
+            }
+        })
+    }
+
+    function deleteAduan(id) {
+        if(id.trim() === '') {
+            Swal.fire({
+                html: '<span style="font-size: 14px;">Tidak ada data yang dipilih!</span>',
+                icon: 'error',
+            });
+
+            return;
+        }
+
+        Swal.fire({
+            html: '<span style="font-size: 14px;">Hapus data yang dipilih ?</span>',
+            icon: 'question',
+            confirmButtonText: 'Ya',
+            showCancelButton: true,
+            cancelButtonText: 'Tidak',
+        }).then((result) => {
+            if(result.isConfirmed) {
+                if(result.value) {
+                    $.ajax({
+                        url: path + 'listAduan/deleteAduan/',
+                        method: 'POST',
+                        data: {
+                            'idAduan': id,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        },
+                        success: function(data) {
+                            showToast('', data.message);
+                        }
+                    })
+                }
+            }
+        })
+    }
+</script>

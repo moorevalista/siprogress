@@ -1,0 +1,155 @@
+<script>
+    var status_aud = "";
+    var idGudang = "";
+    var namaGudang = "";
+    var keteranganGudang = "";
+    $(document).ready(function () {
+        setGrid()
+        setAwal() 
+        $("#menu_tambah").click(btnAdd)
+        $("#menu_edit").click(btnEdit)
+        $("#menu_batal").click(btnBatal)
+        $("#menu_hapus").click(btnHapus)
+        $("#menu_simpan").click(btnSimpan)
+
+        idGudang = $("#idGudang")
+        namaGudang = $("#namaGudang")
+        keteranganGudang = $("#keteranganGudang")
+    })
+
+    function setAwal() {
+        $("#menu_tambah").attr('disabled',false)
+        $("#menu_edit").attr('disabled',true)
+        $("#menu_batal").attr('disabled',false)
+        $("#menu_hapus").attr('disabled',false)
+        $("#menu_simpan").attr('disabled',true)
+        $("#menu_keluar").attr('disabled',false)
+
+        $("#idGudang").prop('disabled', true)
+        $("#namaGudang").prop('disabled', true)
+        $("#keteranganGudang").prop('disabled', true)
+        $("#idGudang").val('')
+        $("#namaGudang").val('')
+        $("#keteranganGudang").val('')
+        status_aud = ''
+    }
+
+    function btnAdd(e = null) {
+        setAwal()
+        $("#menu_tambah").attr('disabled',true)
+        $("#menu_edit").attr('disabled',true)
+        $("#menu_batal").attr('disabled',false)
+        $("#menu_hapus").attr('disabled',true)
+        $("#menu_simpan").attr('disabled',false)
+        $("#menu_keluar").attr('disabled',false)
+        $("#idGudang").prop('disabled', true)
+        $("#namaGudang").prop('disabled', false)
+        $("#keteranganGudang").prop('disabled', false)
+        $("#namaGudang").focus()
+        status_aud = 'A'
+    }
+    function btnEdit(e = null) {
+        $("#menu_tambah").attr('disabled',true)
+        $("#menu_edit").attr('disabled',true)
+        $("#menu_batal").attr('disabled',false)
+        $("#menu_hapus").attr('disabled',false)
+        $("#menu_simpan").attr('disabled',false)
+        $("#menu_keluar").attr('disabled',false)
+
+        $("#idGudang").prop('disabled', true)
+        $("#namaGudang").prop('disabled', false)
+        $("#keteranganGudang").prop('disabled', false)
+        status_aud = 'U'
+    }
+    function btnBatal(e = null) {
+        setAwal() 
+    }
+    function btnHapus(e = null) {
+        status_aud = 'D'
+    }
+    async function btnSimpan(e = null) {
+        try {
+            const result = await $.ajax({
+                url: "/master_gudang/simpanGudang",
+                method: "POST",
+                data: {
+                    'csrfmiddlewaretoken': '{{ csrf_token }}',
+                    status_aud: status_aud,
+                    idGudang: idGudang.val(),
+                    namaGudang: namaGudang.val(),
+                    keteranganGudang: keteranganGudang.val(),
+                }
+            })
+            setGrid()
+            if (result.status === false) {
+                alert(result.message)
+                console.log(result.error)
+                return
+            }
+            alert("Sukses Simpan!")
+            return
+        } catch (e) {
+            console.log(e);
+        }
+
+        
+    }
+
+    async function setGrid() {
+        const data = await $.ajax({
+            url: "/master_gudang/getListGudang/",
+            method: "GET",
+        })
+
+        $("#dxListGudang").dxDataGrid({
+            dataSource: data,
+            selection: {
+                mode: "single"
+            },
+            sorting: {
+                mode: 'multiple',
+            },
+            rowAlternationEnabled: true,
+            hoverStateEnabled: true,
+            showBorders: true,
+            allowDeleting: false,
+            paging: {
+                pageSize: 100000
+            },
+            export: {
+                enabled: true
+            },
+            grouping: {
+                autoExpandAll: true,
+            },
+            searchPanel: {
+                visible: true
+            },
+            groupPanel: {
+                visible: true
+            },
+            columns: [
+                {
+                    dataField: "DEPT_ID",
+                    caption: "ID Gudang"
+                },
+                {
+                    dataField: "DEPTN",
+                    caption: "Nama Gudang"
+                },
+                {
+                    dataField: "DEPT_KETERANGAN",
+                    caption: "Keterangan"
+                },
+            ],
+            onRowClick: function (e) {
+                $("#idGudang").val(e.data.DEPT_ID)
+                $("#namaGudang").val(e.data.DEPTN)
+                $("#keteranganGudang").val(e.data.DEPT_KETERANGAN)
+                $("#namaGudang").focus()
+                $("#menu_edit").attr('disabled',false)
+
+            }
+        })
+    }
+</script>

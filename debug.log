@@ -1,0 +1,1789 @@
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/privelige.py", line 390, in divisi
+    response = render(request, 'divisi/home/home.html', ())
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/context.py", line 270, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than tuple.
+"GET /divisi/ HTTP/1.1" 500 92085
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 43, in divisi
+    response = render(request, 'divisi/home/home.html', {})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+"GET /divisi/ HTTP/1.1" 500 156088
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 43, in divisi
+    response = render(request, 'divisi/home/home.html', {})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+"GET /divisi/ HTTP/1.1" 500 156088
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: '/img/icons/gradient/rujukan.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 43, in divisi
+    response = render(request, 'divisi/home/home.html', {})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 75: '/img/icons/gradient/rujukan.png'. Did you forget to register or load this tag?
+"GET /divisi/ HTTP/1.1" 500 187010
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 48, in divisi
+    response = render(request, 'divisi/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+"GET /divisi/ HTTP/1.1" 500 158316
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 48, in divisi
+    response = render(request, 'divisi/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+"GET /divisi/ HTTP/1.1" 500 158373
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 48, in divisi
+    response = render(request, 'divisi/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: layout/bs4/navbar.html
+"GET /divisi/ HTTP/1.1" 500 158316
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 29, in dashboard
+    response = render(request, 'dashboard/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 14: 'static'. Did you forget to register or load this tag?
+"GET / HTTP/1.1" 500 201072
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 15, in dashboard
+    qnavbar = "SELECT * FROM PRIVILEGE_NAVBAR A RIGHT JOIN PROPERTIES_NAVBAR B ON A.NAVBAR_PRIV = B.id WHERE A.USER_PRIV = '"+user_priv+"' AND B.modul = 'siprogress' ORDER BY B.parent ASC, B.nav_order ASC;"
+NameError: name 'user_priv' is not defined
+"GET / HTTP/1.1" 500 76296
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 15, in dashboard
+    qnavbar = "SELECT * FROM PRIVILEGE_NAVBAR A RIGHT JOIN PROPERTIES_NAVBAR B ON A.NAVBAR_PRIV = B.id WHERE A.USER_PRIV = '"+user_priv+"' AND B.modul = 'siprogress' ORDER BY B.parent ASC, B.nav_order ASC;"
+NameError: name 'user_priv' is not defined
+"GET / HTTP/1.1" 500 76296
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 43, in divisi
+    is_login = checkLogin(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 40, in checkLogin
+    return [is_login, user_priv]
+UnboundLocalError: local variable 'user_priv' referenced before assignment
+"GET /divisi/ HTTP/1.1" 500 79103
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 43, in divisi
+    is_login = checkLogin(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 40, in checkLogin
+    return [is_login, user_priv]
+UnboundLocalError: local variable 'user_priv' referenced before assignment
+"GET /divisi/ HTTP/1.1" 500 79103
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 43, in divisi
+    is_login = checkLogin(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 40, in checkLogin
+    return [is_login, user_priv]
+UnboundLocalError: local variable 'user_priv' referenced before assignment
+"GET /divisi/ HTTP/1.1" 500 79103
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 43, in divisi
+    is_login = checkLogin(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 40, in checkLogin
+    return [is_login, user_priv]
+UnboundLocalError: local variable 'user_priv' referenced before assignment
+"GET /divisi/ HTTP/1.1" 500 79103
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 43, in divisi
+    is_login = checkLogin(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 40, in checkLogin
+    return [is_login, user_priv]
+UnboundLocalError: local variable 'user_priv' referenced before assignment
+"GET /divisi/ HTTP/1.1" 500 79103
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 8, in dashboard
+    is_login = checkLogin(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 40, in checkLogin
+    return [is_login, user_priv]
+UnboundLocalError: local variable 'user_priv' referenced before assignment
+"GET / HTTP/1.1" 500 78908
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 62, in divisi
+    response = render(request, 'divisi/home/home.html', {})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/defaulttags.py", line 1358, in url
+    raise TemplateSyntaxError("'%s' takes at least one argument, a URL pattern name." % bits[0])
+django.template.exceptions.TemplateSyntaxError: 'url' takes at least one argument, a URL pattern name.
+"GET /divisi/ HTTP/1.1" 500 193626
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 62, in divisi
+    response = render(request, 'divisi/home/home.html', {})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/defaulttags.py", line 1358, in url
+    raise TemplateSyntaxError("'%s' takes at least one argument, a URL pattern name." % bits[0])
+django.template.exceptions.TemplateSyntaxError: 'url' takes at least one argument, a URL pattern name.
+"GET /divisi/ HTTP/1.1" 500 193670
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 62, in divisi
+    response = render(request, 'divisi/home/home.html', {})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/defaulttags.py", line 1358, in url
+    raise TemplateSyntaxError("'%s' takes at least one argument, a URL pattern name." % bits[0])
+django.template.exceptions.TemplateSyntaxError: 'url' takes at least one argument, a URL pattern name.
+"GET /divisi/ HTTP/1.1" 500 193670
+Internal Server Error: /divisi/getDivisi
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]An expression of non-boolean type specified in a context where a condition is expected, near 'THEN'. (4145) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 71, in getDivisi
+    cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]An expression of non-boolean type specified in a context where a condition is expected, near 'THEN'. (4145) (SQLExecDirectW)")
+"GET /divisi/getDivisi HTTP/1.1" 500 26697
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Unclosed quotation mark after the character string 'divisi order by id asc;'. (105) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 25, in dashboard
+    menubars = Globals().getData(qmenubar)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/siprogress/globals.py", line 235, in getData
+    cursor.execute(query)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Unclosed quotation mark after the character string 'divisi order by id asc;'. (105) (SQLExecDirectW)")
+"GET / HTTP/1.1" 500 126614
+Internal Server Error: /divisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: layout/menu_bar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 62, in divisi
+    response = render(request, 'divisi/home/home.html', {})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: layout/menu_bar.html
+"GET /divisi/ HTTP/1.1" 500 161511
+Internal Server Error: /divisi/saveDivisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to tinyint. (8114) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 101, in saveDivisi
+    cursor.execute(sql % params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to tinyint. (8114) (SQLExecDirectW)')
+"POST /divisi/saveDivisi/ HTTP/1.1" 500 26766
+Internal Server Error: /divisi/saveDivisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near the keyword 'on'. (156) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 101, in saveDivisi
+    cursor.execute(sql % params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near the keyword 'on'. (156) (SQLExecDirectW)")
+"POST /divisi/saveDivisi/ HTTP/1.1" 500 26742
+Internal Server Error: /divisi/saveDivisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 98, in saveDivisi
+    request.POST['status'],
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'status'
+"POST /divisi/saveDivisi/ HTTP/1.1" 500 24729
+Internal Server Error: /divisi/saveDivisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type nvarchar to tinyint. (8114) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 101, in saveDivisi
+    cursor.execute(sql % params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type nvarchar to tinyint. (8114) (SQLExecDirectW)')
+"POST /divisi/saveDivisi/ HTTP/1.1" 500 26771
+Internal Server Error: /divisi/deleteDivisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    raise ValueError(
+ValueError: The view dashboard.views.deleteDivisi didn't return an HttpResponse object. It returned None instead.
+"POST /divisi/deleteDivisi/ HTTP/1.1" 500 23875
+Internal Server Error: /divisi/deleteDivisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 131, in deleteDivisi
+    cursor.execute(sql % params)
+TypeError: not all arguments converted during string formatting
+"POST /divisi/deleteDivisi/ HTTP/1.1" 500 24255
+Internal Server Error: /divisi/deleteDivisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 131, in deleteDivisi
+    cursor.execute(sql % params)
+TypeError: not all arguments converted during string formatting
+"POST /divisi/deleteDivisi/ HTTP/1.1" 500 24255
+Internal Server Error: /divisi/deleteDivisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function deleteDivisi has too many arguments specified. (8144) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 132, in deleteDivisi
+    cursor.execute(sql % params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function deleteDivisi has too many arguments specified. (8144) (SQLExecDirectW)')
+"POST /divisi/deleteDivisi/ HTTP/1.1" 500 26806
+Internal Server Error: /divisi/deleteDivisi/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to tinyint. (8114) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 132, in deleteDivisi
+    cursor.execute(sql % params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to tinyint. (8114) (SQLExecDirectW)')
+"POST /divisi/deleteDivisi/ HTTP/1.1" 500 26740
+Internal Server Error: /komplain/saveKomplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'saveKomplain' expects parameter '@STATUS_AUD', which was not supplied. (201) (SQLExecDirectW)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 238, in saveKomplain
+    cursor.execute(sql % params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/sql_server/pyodbc/base.py", line 561, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'saveKomplain' expects parameter '@STATUS_AUD', which was not supplied. (201) (SQLExecDirectW)")
+"POST /komplain/saveKomplain/ HTTP/1.1" 500 27151
+Internal Server Error: /komplain/saveKomplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 235, in saveKomplain
+    img_url,
+UnboundLocalError: local variable 'img_url' referenced before assignment
+"POST /komplain/saveKomplain/ HTTP/1.1" 500 24521
+Internal Server Error: /komplain/deleteKomplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'idKomplain'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 260, in deleteKomplain
+    request.POST['idKomplain'],
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'idKomplain'
+"POST /komplain/deleteKomplain/ HTTP/1.1" 500 24829
+Internal Server Error: /komplain/deleteKomplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'judulKomplain'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 261, in deleteKomplain
+    request.POST['judulKomplain'],
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'judulKomplain'
+"POST /komplain/deleteKomplain/ HTTP/1.1" 500 24840
+Internal Server Error: /komplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 183, in komplain
+    response = render(request, 'komplain/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 310: 'static'. Did you forget to register or load this tag?
+"GET /komplain/ HTTP/1.1" 500 255281
+Internal Server Error: /komplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: "'static/images/uploads/Screenshot%202024-02-21%20at%2019.54.14.png'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 183, in komplain
+    response = render(request, 'komplain/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 311: ''static/images/uploads/Screenshot%202024-02-21%20at%2019.54.14.png''. Did you forget to register or load this tag?
+"GET /komplain/ HTTP/1.1" 500 257098
+Internal Server Error: /komplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 183, in komplain
+    response = render(request, 'komplain/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 449, in parse
+    raise self.error(token, e)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '% static ' + img + ' %' from '% static ' + img + ' %'
+"GET /komplain/ HTTP/1.1" 500 260834
+Internal Server Error: /komplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_static_prefix'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 183, in komplain
+    response = render(request, 'komplain/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 311: 'get_static_prefix'. Did you forget to register or load this tag?
+"GET /komplain/ HTTP/1.1" 500 256512
+Internal Server Error: /komplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_static_prefix'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 183, in komplain
+    response = render(request, 'komplain/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 311: 'get_static_prefix'. Did you forget to register or load this tag?
+"GET /komplain/ HTTP/1.1" 500 256498
+Internal Server Error: /komplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_static_prefix'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 183, in komplain
+    response = render(request, 'komplain/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 311: 'get_static_prefix'. Did you forget to register or load this tag?
+"GET /komplain/ HTTP/1.1" 500 256380
+Internal Server Error: /komplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_static_prefix'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 183, in komplain
+    response = render(request, 'komplain/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 311: 'get_static_prefix'. Did you forget to register or load this tag?
+"GET /komplain/ HTTP/1.1" 500 256396
+Internal Server Error: /komplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_static_prefix'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 183, in komplain
+    response = render(request, 'komplain/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 311: 'get_static_prefix'. Did you forget to register or load this tag?
+"GET /komplain/ HTTP/1.1" 500 256396
+Internal Server Error: /komplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 183, in komplain
+    response = render(request, 'komplain/home/home.html', {'navbars':navbars, 'menubars':menubars})
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 28, in do_static
+    return _do_static(parser, token)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/templatetags/static.py", line 159, in do_static
+    return StaticNode.handle_token(parser, token)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/templatetags/static.py", line 133, in handle_token
+    path = parser.compile_filter(bits[1])
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/template/base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '`' + img + '`' from '`' + img + '`'
+"GET /komplain/ HTTP/1.1" 500 271357
+Internal Server Error: /komplain/saveKomplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'idKomplain'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 238, in saveKomplain
+    request.POST['idKomplain'],
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'idKomplain'
+"POST /komplain/saveKomplain/ HTTP/1.1" 500 24386
+Internal Server Error: /komplain/saveKomplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'judulKomplain'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 239, in saveKomplain
+    request.POST['judulKomplain'],
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'judulKomplain'
+"POST /komplain/saveKomplain/ HTTP/1.1" 500 24407
+Internal Server Error: /komplain/saveKomplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'pelaporKomplain'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 241, in saveKomplain
+    request.POST['pelaporKomplain'],
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'pelaporKomplain'
+"POST /komplain/saveKomplain/ HTTP/1.1" 500 24492
+Internal Server Error: /komplain/saveKomplain/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'judulKomplain'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 239, in saveKomplain
+    request.POST['judulKomplain'],
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'judulKomplain'
+"POST /komplain/saveKomplain/ HTTP/1.1" 500 24407
+Internal Server Error: /komplain/updateStatus/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 266, in updateStatus
+    sql = "UPDATE MDKOMPLAIN SET MDSTATUS = '%s' WHERE MDKOMPLAIN_ID = '%s'" % (request.POST['idKomplain'], request.POST['status'])
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'status'
+"POST /komplain/updateStatus/ HTTP/1.1" 500 24482
+Internal Server Error: /komplain/updateStatus/
+Traceback (most recent call last):
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/virtualenv_siprogress/lib/python3.10/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/juanmoore/Documents/Juan/Kerjaan/Airan/Development/medisimed/siprogress/dashboard/views.py", line 281, in updateStatus
+    json_data = json.dumps(res, cls=DjangoJSONEncoder)
+UnboundLocalError: local variable 'res' referenced before assignment
+"POST /komplain/updateStatus/ HTTP/1.1" 500 23947
